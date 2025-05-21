@@ -35,10 +35,10 @@ public class SecurityConfig {
                     auth.requestMatchers("/auth/**").permitAll();
                     auth.requestMatchers("/homepage/**").permitAll();
                     auth.requestMatchers("/actuator/**").permitAll();
-                    auth.requestMatchers(HttpMethod.GET, "/accounts/**").hasAnyAuthority("ADMIN", "USER");
-                    auth.requestMatchers(HttpMethod.POST, "/accounts/**").hasAnyAuthority("ADMIN");
-                    auth.requestMatchers(HttpMethod.PUT, "/accounts/**").hasAnyAuthority("ADMIN");
-                    auth.requestMatchers(HttpMethod.DELETE, "/accounts/**").hasAnyAuthority("ADMIN");
+                    auth.requestMatchers(HttpMethod.GET, "/account/**").hasAnyAuthority("ADMIN", "USER");
+                    auth.requestMatchers(HttpMethod.POST, "/account/**").hasAnyAuthority("ADMIN");
+                    auth.requestMatchers(HttpMethod.PUT, "/account/**").hasAnyAuthority("ADMIN");
+                    auth.requestMatchers(HttpMethod.DELETE, "/account/**").hasAnyAuthority("ADMIN");
                     auth.anyRequest().authenticated();
                 })
                 .formLogin(Customizer.withDefaults())

@@ -33,8 +33,8 @@ public class AuthenticationService {
 
         List<Role> roles = new ArrayList<>();
 
-       // addRoleUser(roles);
-        addRoleAdmin(roles);
+        addRoleUser(roles);
+        //addRoleAdmin(roles);
 
         Member member = new Member();
         member.setEmail(email);
